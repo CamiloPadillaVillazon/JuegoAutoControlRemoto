@@ -30,6 +30,10 @@ describe("Validaciones", () => {
         expect(avanzar("4,5", "N", 4, 5)).toEqual("No se puede avanzar");
     });
 
+    it("Debería retornar un error si intenta avanzar fuera de los límites al Sur", () => {
+        expect(avanzar("0,0", "S", 4, 5)).toEqual("No se puede avanzar");
+    });
+
 
 
 
