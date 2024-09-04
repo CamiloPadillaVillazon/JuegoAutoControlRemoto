@@ -39,4 +39,9 @@ function avanzar(posicion, direccion, xMax, yMax) {
     return `${x},${y}`;
 }
 
-export {validarSuperficie, validarPosicionInicial, validarDireccion, avanzar};
+function girarIzquierda(direccion) {
+    const direcciones = { "N": "O", "O": "S", "S": "E", "E": "N" };
+    return direcciones[direccion] || "Dirección Inválida";
+}
+
+export {validarSuperficie, validarPosicionInicial, validarDireccion, avanzar, girarIzquierda};

@@ -1,5 +1,4 @@
-import {validarSuperficie, validarPosicionInicial, validarDireccion, avanzar} from "./auto.js"
-
+import {validarSuperficie, validarPosicionInicial, validarDireccion, avanzar, girarIzquierda} from "./auto.js"
 
 describe("Validaciones", () => {
     it("Debería validar el tamaño de la superficie", () => {
@@ -32,6 +31,11 @@ describe("Validaciones", () => {
 
     it("Debería retornar un error si intenta avanzar fuera de los límites al Sur", () => {
         expect(avanzar("0,0", "S", 4, 5)).toEqual("No se puede avanzar");
+    });
+
+    
+    it("Debería manejar una dirección inválida al girar a la izquierda", () => {
+        expect(girarIzquierda("X")).toEqual("Dirección Inválida");
     });
 
 
