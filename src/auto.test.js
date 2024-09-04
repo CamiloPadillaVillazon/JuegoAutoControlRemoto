@@ -1,4 +1,4 @@
-import {validarSuperficie, validarPosicionInicial} from "./auto.js"
+import {validarSuperficie, validarPosicionInicial, validarDireccion} from "./auto.js"
 
 
 describe("Validaciones", () => {
@@ -12,6 +12,10 @@ describe("Validaciones", () => {
 
     it("Debería retornar false para una posición fuera del rango", () => {
         expect(validarPosicionInicial("6,5", "5,5")).toEqual(false);
+    });
+
+    it("Debería validar dirección inicial del auto", () => {
+        expect(validarDireccion("N")).toEqual(true);
     });
 
 

@@ -9,4 +9,8 @@ function validarPosicionInicial(pInicial, superficie) {
     return x >= 0 && x <= xMax && y >= 0 && y <= yMax;
 }
 
-export {validarSuperficie, validarPosicionInicial};
+function validarDireccion(direccion) {
+    return ["N", "S", "E", "O"].includes(direccion);
+}
+
+export {validarSuperficie, validarPosicionInicial, validarDireccion};
