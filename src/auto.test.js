@@ -26,6 +26,9 @@ describe("Validaciones", () => {
         expect(avanzar("3,4", "N", 4, 5)).toEqual("3,5");
     });
 
+    it("Debería retornar un error si intenta avanzar fuera de los límites al Norte", () => {
+        expect(avanzar("4,5", "N", 4, 5)).toEqual("No se puede avanzar");
+    });
 
 
 
