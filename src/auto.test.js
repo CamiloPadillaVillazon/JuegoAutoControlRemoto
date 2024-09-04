@@ -18,6 +18,11 @@ describe("Validaciones", () => {
         expect(validarDireccion("N")).toEqual(true);
     });
 
+    it("Debería retornar false para una dirección inválida", () => {
+        expect(validarDireccion("X")).toEqual(false);
+    });
+
+
 
 
 
