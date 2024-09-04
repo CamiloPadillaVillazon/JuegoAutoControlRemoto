@@ -33,9 +33,12 @@ describe("Validaciones", () => {
         expect(avanzar("0,0", "S", 4, 5)).toEqual("No se puede avanzar");
     });
 
-    
     it("Debería manejar una dirección inválida al girar a la izquierda", () => {
         expect(girarIzquierda("X")).toEqual("Dirección Inválida");
+    });
+
+    it("Debería validar giro a la izquierda", () => {
+        expect(girarIzquierda("O")).toEqual("S");
     });
 
 
