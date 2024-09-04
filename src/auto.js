@@ -13,4 +13,30 @@ function validarDireccion(direccion) {
     return ["N", "S", "E", "O"].includes(direccion);
 }
 
-export {validarSuperficie, validarPosicionInicial, validarDireccion};
+function avanzar(posicion, direccion, xMax, yMax) {
+    let [x, y] = posicion.split(',').map(Number);
+
+    switch(direccion) {
+        case "N":
+            if (y + 1 > yMax) return "No se puede avanzar";
+            y += 1;
+            break;
+        case "S":
+            if (y - 1 < 0) return "No se puede avanzar";
+            y -= 1;
+            break;
+        case "E":
+            if (x + 1 > xMax) return "No se puede avanzar";
+            x += 1;
+            break;
+        case "O":
+            if (x - 1 < 0) return "No se puede avanzar";
+            x -= 1;
+            break;
+        default:
+            return "Dirección Inválida";
+    }
+    return `${x},${y}`;
+}
+
+export {validarSuperficie, validarPosicionInicial, validarDireccion, avanzar};

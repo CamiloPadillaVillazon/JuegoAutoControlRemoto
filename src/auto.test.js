@@ -1,4 +1,4 @@
-import {validarSuperficie, validarPosicionInicial, validarDireccion} from "./auto.js"
+import {validarSuperficie, validarPosicionInicial, validarDireccion, avanzar} from "./auto.js"
 
 
 describe("Validaciones", () => {
@@ -20,6 +20,10 @@ describe("Validaciones", () => {
 
     it("Debería retornar false para una dirección inválida", () => {
         expect(validarDireccion("X")).toEqual(false);
+    });
+
+    it("Debería validar avanzar la posición del auto", () => {
+        expect(avanzar("3,4", "N", 4, 5)).toEqual("3,5");
     });
 
 
