@@ -10,6 +10,10 @@ describe("Validaciones", () => {
         expect(validarPosicionInicial("4,5", "5,5")).toEqual(true);
     });
 
+    it("Debería retornar false para una posición fuera del rango", () => {
+        expect(validarPosicionInicial("6,5", "5,5")).toEqual(false);
+    });
+
 
 
 
