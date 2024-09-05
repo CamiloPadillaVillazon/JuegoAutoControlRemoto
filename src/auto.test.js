@@ -45,6 +45,10 @@ describe("Validaciones", () => {
         expect(girarDerecha("N")).toEqual("E");
     });
 
+    it("Debería manejar una dirección inválida al girar a la derecha", () => {
+        expect(girarDerecha("X")).toEqual("Dirección Inválida");
+    });
+
 
 
 
