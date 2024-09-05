@@ -53,9 +53,9 @@ describe("Validaciones", () => {
         expect(cambioPosicion("2,3", "O", "IAADAIA", 5, 5)).toEqual({x: 1, y: 0, direccion: "S"});
     });
 
-
-
-
-
+    it("Debería manejar un comando inválido en cambioPosicion", () => {
+        const resultado = cambioPosicion("2,3", "O", "X", 5, 5);
+        expect(resultado.error).toEqual("Comando inválido: X");
+    });
 
 });
