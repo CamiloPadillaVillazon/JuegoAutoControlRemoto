@@ -1,4 +1,4 @@
-import {validarSuperficie, validarPosicionInicial, validarDireccion, avanzar, girarIzquierda, girarDerecha} from "./auto.js"
+import {validarSuperficie, validarPosicionInicial, validarDireccion, avanzar, girarIzquierda, girarDerecha, cambioPosicion} from "./auto.js"
 
 describe("Validaciones", () => {
     it("Debería validar el tamaño de la superficie", () => {
@@ -47,6 +47,10 @@ describe("Validaciones", () => {
 
     it("Debería manejar una dirección inválida al girar a la derecha", () => {
         expect(girarDerecha("X")).toEqual("Dirección Inválida");
+    });
+
+    it("Debería validar el movimiento del auto/cambio de posición y dirección", () => {
+        expect(cambioPosicion("2,3", "O", "IAADAIA", 5, 5)).toEqual({x: 1, y: 0, direccion: "S"});
     });
 
 
